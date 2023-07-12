@@ -15,6 +15,11 @@ public class PolizaCombinadoFamiliar extends Poliza implements SegurosDeVida, Se
 	}
 
 	@Override
+	public void agregarBienAsegurado(Posesion unBienAAsegurar) {
+		this.vivienda = (Vivienda) unBienAAsegurar;
+	}
+	
+	@Override
 	public void agregarBeneficiario(Persona persona, TipoDeBeneficiario tipoBeneficiario) {
 		this.beneficiarios.put(persona, tipoBeneficiario);
 	}
@@ -23,30 +28,28 @@ public class PolizaCombinadoFamiliar extends Poliza implements SegurosDeVida, Se
 	public Integer obtenerCantidadDeBeneficiarios() {
 		return this.beneficiarios.size();
 	}
+	@Override
+	public Auto getAuto() {
+		return null;
+	}
 
 	@Override
 	public Persona getAsegurado() {
 		return this.asegurado;
 	}
 
+	
 	@Override
 	public Double getPremio() {
 		return this.premio;
 	}
 
-	@Override
-	public void agregarBienAsegurado(Posesion unBienAAsegurar) {
-		this.vivienda = (Vivienda) unBienAAsegurar;
-	}
+	
 
 	@Override
 	public Integer getNumeroDePoliza() {
 		return this.numeroDePoliza;
 	}
 
-	@Override
-	public Auto getAuto() {
-		return null;
-	}
-
+	
 }

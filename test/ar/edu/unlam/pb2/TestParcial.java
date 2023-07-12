@@ -54,7 +54,7 @@ public class TestParcial {
 		final Double SUMA_ASEGURADA = 2000000.0, PRIMA = 5000.0, PREMIO = 6000.0;
 		
 		Persona asegurado = new Persona("Camila", 45987345, 24);
-		Persona hijo = new Persona("Arturo", 65456231, 2);
+		Persona hijo = new Persona("Arturo", 45456231, 2);
 		Persona conyuge = new Persona("Arturo", 65456231, 2);
 		
 		SegurosDeVida poliza = new PolizaAccidentesPersonales(NUMERO_DE_POLIZA, asegurado, SUMA_ASEGURADA, PRIMA, PREMIO);
@@ -74,8 +74,8 @@ public class TestParcial {
 		
 		Vivienda casa = new Vivienda("Florencio Varela 1800", "San Justo", "La Matanza", "Buenos Aires");
 		Persona asegurado = new Persona("Camila", 45987345, 24);
-		Persona hijo = new Persona("Arturo", 65456231, 2);
-		Persona hija = new Persona("Maia", 65445231, 4);
+		Persona hijo = new Persona("Arturo", 45456231, 2);
+		Persona hija = new Persona("Maia", 38445231, 4);
 		Persona conyuge = new Persona("Arturo", 65456231, 2);
 		
 		PolizaCombinadoFamiliar poliza = new PolizaCombinadoFamiliar(NUMERO_DE_POLIZA, asegurado, SUMA_ASEGURADA, PRIMA, PREMIO);
@@ -87,7 +87,7 @@ public class TestParcial {
 		assertEquals((Integer)3, poliza.obtenerCantidadDeBeneficiarios());
 		assertEquals(asegurado, poliza.getAsegurado());
 		assertEquals(PREMIO, poliza.getPremio());
-		//ARREGLAR GETAUTO
+		//Tengo que ARREGLAR GETAUTO
 	}
 ///////////////////////////////////////////////////////////////////////////////////	
 	
